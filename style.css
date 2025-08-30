@@ -1,0 +1,100 @@
+/* Nuevo bloque de colores */
+:root {
+    --bg-dark: #1e2430; /* Fondo azul oscuro */
+    --primary-blue: #4287f5; /* Azul principal */
+    --secondary-blue: #8cb0e2; /* Azul secundario */
+    --text-light: #ffffff; /* Texto blanco */
+}
+
+/* Mantén el resto de los estilos del archivo, solo cambia
+  los valores de los selectores que usan las variables.
+*/
+
+body {
+    background-color: var(--bg-dark); /* Cambio de color de fondo */
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2a3140; /* Un tono un poco más claro para el encabezado */
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--primary-blue); /* Color del borde del encabezado */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav ul li a {
+    color: var(--secondary-blue); /* Color de los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-blue); /* Cambio de color al pasar el ratón */
+}
+
+.hero {
+    background: linear-gradient(rgba(30,36,48,0.7), rgba(30,36,48,0.7)), url('https://discord.com/assets/f622d100c5c760a5e50529d332674e1d.svg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+}
+
+.btn-primary, .btn-secondary {
+    background-color: var(--primary-blue); /* Color del botón principal */
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: var(--secondary-blue); /* Cambio de color al pasar el ratón */
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-blue); /* Borde del botón secundario */
+}
+
+.about, .courses, .contact {
+    background-color: #2a3140; /* Fondo de las secciones */
+}
+
+.courses {
+    background-color: var(--bg-dark); /* Fondo de la sección de cursos */
+}
+
+.course-card {
+    background-color: #2a3140; /* Fondo de las tarjetas de cursos */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.course-card h4 {
+    color: var(--primary-blue); /* Color de los títulos de los cursos */
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #2a3140; /* Fondo del pie de página */
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid var(--primary-blue); /* Borde superior del pie de página */
+}
+
+/* Nuevo estilo para el logo */
+.logo {
+    height: 40px; /* Ajusta este valor si necesitas un logo más grande o pequeño */
+    margin-right: 15px;
+    vertical-align: middle;
+}
